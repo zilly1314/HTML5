@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+	作者：zilly1314@126.com
+	时间：2016-12-15
+	预览：http://www.zilly.cn/html5/capter2_2.html
+-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>canvas标签绘制图形示例</title>
+		<script type="text/javascript">
+			function drawSquare(){
+				var canvas = document.getElementById('simple-square');
+				if(canvas.getContext){
+					var context = canvas.getContext('2d');
+					context.fillStyle = "rgb(13, 118, 208)";
+					context.fillRect(2, 2, 298, 298);
+				}else{
+					// 提示用户浏览器不支持canvas标签
+					alert("本页面需要支持HTML5的浏览器才能正常显示！")
+				}
+			}
+		</script>
+	</head>
+	<body onload="drawSquare()">
+		<section>
+			<header>
+				<h1>这里展示了一个canvas标签的应用</h1>
+			</header>
+			<canvas id="simple-square" width="300" height="300"></canvas>
+		</section>
+	</body>
+</html>
